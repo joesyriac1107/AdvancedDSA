@@ -1,0 +1,12 @@
+Euclid Algorithm to find GCD of A&B
+
+find the smaller of A and B
+
+    if A < B
+        while B%A!=0
+           temp c =B%A
+           B=A
+           A=c
+
+
+        return A;
