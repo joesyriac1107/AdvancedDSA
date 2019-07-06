@@ -23,7 +23,7 @@ public class KnuthMorrisPratt {
 	 * @return
 	 */
 	public int search(char[] array, char[] pattern) {
-		int[] lsp =computeLongestSPTable(pattern);
+		int[] lsp =computeLSPTable(pattern);
 		int j=0;
 		for(int i=0;i<array.length;i++) {
 			while(j>0 && array[i] != pattern[j]) {
@@ -49,7 +49,7 @@ public class KnuthMorrisPratt {
  * @param pattern
  * @return
  */
-	public int[] computeLongestSPTable(char[] pattern) {
+	public int[] computeLSPTable(char[] pattern) {
 		int [] lsp = new int[pattern.length];
 		int j=0;
 		for(int i=1;i<pattern.length;i++) {
